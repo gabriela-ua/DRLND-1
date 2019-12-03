@@ -18,7 +18,7 @@ For this project, you will work with the [Reacher](https://github.com/Unity-Tech
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible. The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1. 
 
-Note: This project provides two different versions, one agent or 20 agents.I decided to used the second version that contains 20 identical agents with their own copy environment.
+Note: This project provides two different versions, one agent or 20 agents.I decided to use the second version that contains 20 identical agents with their own copy environment.
 
 ## Project requirements: See 'requirements.txt'
 
@@ -67,10 +67,10 @@ The algorithm used is Deep Deterministic Policy Gradients (DDPG).
 The final hyper-parameters used were as follows: (n_episodes=500, max_t=1000, solved_score=30.0, consec_episodes=100, print_every=1, train_mode=True,actor_path='actor_ckpt.pth', critic_path='critic_ckpt.pth').
 
 ### 4.Results
-Plots and Results are shown in the Jupyter notebook (Continuos_Control_20Agents_P2_AP.ipynb) and Report.
+Plots and Results are shown in the Jupyter notebook (Continuos_Control_20Agents_P2_AP_v2.ipynb) and Report.
 
 ### For additional information:
-Please see the Jupyter Notebook: 'Continuos_Control_20Agents_P2_AP.ipynb'
+Please see the Jupyter Notebook: 'Continuos_Control_20Agents_P2_AP_v2.ipynb'
 
 
 
