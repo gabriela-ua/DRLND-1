@@ -36,30 +36,48 @@ Note: This project provides two different versions, one agent or 20 agents.I dec
 - Benchmark Mean Reward: 30
 
 ##Approach
+
 The high-level steps taken in building an agent that solves this environment.
 
 1. Start the Environment
 1. Evaluate the state and action space.
 1. Implement the learning algorithm.
-1. Run experiments, make revisions, and retrain the agent until the performance threshold is reached.
+1. Results
 
-# 1.Start the Environment
+### 1.Start the Environment
 Import the required libraries and create the UnityEnvironment for this project using 20 agents.
 
-# 2. Evaluate State & Action Space
+### 2. Evaluate State & Action Space
 The state space space has 33 dimensions corresponding to the position, rotation, velocity, and angular velocities of the robotic arm. There are two sections of the arm — analogous to those connecting the shoulder and elbow (i.e., the humerus), and the elbow to the wrist (i.e., the forearm) on a human body.Each action is a vector with four numbers, corresponding to the torque applied to the two joints (shoulder and elbow). Every element in the action vector must be a number between -1 and 1, making the action space continuous.
 
-# 3.Implement the learning algorithm.
+### 3.Implement the learning algorithm.
 
 The algorithm used is Deep Deterministic Policy Gradients (DDPG).
 
-The final hyper-parameters used were as follows (n_episodes=500, max_t=1000).
+     - n_episodes (int)      : maximum number of training episodes
+     - max_t (int)           : maximum number of timesteps per episode   
+     - train_mode (bool)     : if 'True' set environment to training mode
+     - solved_score (float)  : min avg score over consecutive episodes
+     - consec_episodes (int) : number of consecutive episodes used to calculate score
+     - print_every (int)     : interval to display results
+     - actor_path (str)      : directory to store actor network weights
+     - critic_path (str)     : directory to store critic network weights
+
+
+The final hyper-parameters used were as follows: (n_episodes=500, max_t=1000, solved_score=30.0, consec_episodes=100, print_every=1, train_mode=True,actor_path='actor_ckpt.pth', critic_path='critic_ckpt.pth').
+
+### 4.Results
+Plots and Results are shown in the Jupyter notebook (Continuos_Control_20Agents_P2_AP.ipynb) and Report.
 
 
 
 
 
 # Try to train your own agent!!!
+### Project Starter Code
+
+The original Udacity repository for this project can be found [here](https://github.com/silviomori/udacity-deep-reinforcement-learning-p2-continuous-control/archive/master.zip) 
+
 
 ### Distributed Training
 
