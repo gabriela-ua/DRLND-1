@@ -69,7 +69,8 @@ The final hyper-parameters used were as follows: (n_episodes=500, max_t=1000, so
 ### 4.Results
 Plots and Results are shown in the Jupyter notebook (Continuos_Control_20Agents_P2_AP.ipynb) and Report.
 
-
+### For additional information:
+Please see the Jupyter Notebook: 'Continuos_Control_20Agents_P2_AP.ipynb'
 
 
 
