@@ -1,2 +1,2 @@
-# DRLND-Projects-p2ContinuousControl
+# DRLND-Projects
 Udacity Deep Reinforcement Learning Nanodegree Projects
