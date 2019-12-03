@@ -35,7 +35,7 @@ Note: This project provides two different versions, one agent or 20 agents.I dec
 - Reset Parameters: Two, corresponding to goal size, and goal movement speed.
 - Benchmark Mean Reward: 30
 
-##Approach
+## Approach
 
 The high-level steps taken in building an agent that solves this environment.
 
