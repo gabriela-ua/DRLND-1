@@ -16,9 +16,50 @@ For this project, you will work with the [Reacher](https://github.com/Unity-Tech
 
 ![Trained Agent][image1]
 
-In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
+In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible. The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1. 
 
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+Note: This project provides two different versions, one agent or 20 agents.I decided to used the second version that contains 20 identical agents with their own copy environment.
+
+## Project requirements: See 'requirements.txt'
+
+## Environment Details
+
+- Set-up: Double-jointed arm which can move to target locations.
+- Goal: Each agent must move its hand to the goal location, and keep it there.
+- Agents: The environment contains 20 agents linked to a single Brain.
+- Agent Reward Function (independent): +0.1 for each timestep agent's hand is in goal location.
+- Brains: One Brain with the following observation/action space.
+- Vector Observation space: 33 variables corresponding to position, rotation, velocity, and angular velocities of the two arm Rigidbodies.
+- Vector Action space: (Continuous) Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+- Visual Observations: None.
+- Reset Parameters: Two, corresponding to goal size, and goal movement speed.
+- Benchmark Mean Reward: 30
+
+##Approach
+The high-level steps taken in building an agent that solves this environment.
+
+1. Start the Environment
+1. Evaluate the state and action space.
+1. Implement the learning algorithm.
+1. Run experiments, make revisions, and retrain the agent until the performance threshold is reached.
+
+# 1.Start the Environment
+Import the required libraries and create the UnityEnvironment for this project using 20 agents.
+
+# 2. Evaluate State & Action Space
+The state space space has 33 dimensions corresponding to the position, rotation, velocity, and angular velocities of the robotic arm. There are two sections of the arm — analogous to those connecting the shoulder and elbow (i.e., the humerus), and the elbow to the wrist (i.e., the forearm) on a human body.Each action is a vector with four numbers, corresponding to the torque applied to the two joints (shoulder and elbow). Every element in the action vector must be a number between -1 and 1, making the action space continuous.
+
+# 3.Implement the learning algorithm.
+
+The algorithm used is Deep Deterministic Policy Gradients (DDPG).
+
+The final hyper-parameters used were as follows (n_episodes=500, max_t=1000).
+
+
+
+
+
+# Try to train your own agent!!!
 
 ### Distributed Training
 
