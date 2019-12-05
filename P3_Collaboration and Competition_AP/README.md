@@ -46,20 +46,23 @@ The state space has 24 dimensions which include the position and velocity of the
 The algorithm used is Multi-Agent Deep Deterministic Policy Gradients (MADDPG).
 The final hyper-parameters used were as follows (n_episodes=2500, max_t=1000).
 
-- BUFFER_SIZE = int(1e6)  # replay buffer size
-- BATCH_SIZE = 128        # minibatch size
-- LR_ACTOR = 1e-3         # learning rate of the actor
-- LR_CRITIC = 1e-3        # learning rate of the critic
-- WEIGHT_DECAY = 0        # L2 weight decay
-- LEARN_EVERY = 10        # learning timestep interval
-- LEARN_NUM = 5           # number of learning passes
-- GAMMA = 0.99            # discount factor
-- TAU = 8e-3              # for soft update of target parameters
-- OU_SIGMA = 0.2          # Ornstein-Uhlenbeck noise parameter, volatility
-- OU_THETA = 0.15         # Ornstein-Uhlenbeck noise parameter, speed of mean reversion
-- EPS_START = 5.0         # initial value for epsilon in noise decay process in Agent.act()
-- EPS_EP_END = 300        # episode to end the noise decay process
-- EPS_FINAL = 0           # final value for epsilon after decay
+- BUFFER_SIZE = int(1e6)  - # replay buffer size
+- BATCH_SIZE = 128        -# minibatch size
+- LR_ACTOR = 1e-3        - # learning rate of the actor
+- LR_CRITIC = 1e-3        - # learning rate of the critic
+- WEIGHT_DECAY = 0       - # L2 weight decay
+- LEARN_EVERY = 10        - # learning timestep interval
+- LEARN_NUM = 5           - # number of learning passes
+- GAMMA = 0.99           -  # discount factor
+- TAU = 8e-3              - # for soft update of target parameters
+- OU_SIGMA = 0.2          - # Ornstein-Uhlenbeck noise parameter, volatility
+- OU_THETA = 0.15         - # Ornstein-Uhlenbeck noise parameter, speed of mean reversion
+- EPS_START = 5.0         - # initial value for epsilon in noise decay process in Agent.act()
+- EPS_EP_END = 300        - # episode to end the noise decay process
+- EPS_FINAL = 0          - # final value for epsilon after decay
+
+
+
 
 ### 4.Results
 
