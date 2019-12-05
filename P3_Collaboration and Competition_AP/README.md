@@ -10,8 +10,6 @@
 ### Goal of the Project
 
 
-### Introduction
-
 For this project, you will work with the [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) environment.
 
 ![Trained Agent][image1]
@@ -26,6 +24,54 @@ The task is episodic, and in order to solve the environment, your agents must ge
 - This yields a single **score** for each episode.
 
 The environment is considered solved, when the average (over 100 episodes) of those **scores** is at least +0.5.
+
+## Project requirements: See 'requirements.txt'
+
+
+## Approach
+The high-level steps taken in building an agent that solves this environment.
+
+1. Start the Environment
+1. Evaluate the state and action space.
+1. Implement the learning algorithm.
+1. Results
+
+### 1. Start the Environment
+Import the required libraries and create the UnityEnvironment
+
+### 2. Evaluate the state and action space.
+The state space has 24 dimensions which include the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
+
+### 3.Implement the learning algorithm.
+The algorithm used is Multi-Agent Deep Deterministic Policy Gradients (MADDPG).
+The final hyper-parameters used were as follows (n_episodes=2500, max_t=1000).
+
+BUFFER_SIZE = int(1e6)  # replay buffer size
+BATCH_SIZE = 128        # minibatch size
+LR_ACTOR = 1e-3         # learning rate of the actor
+LR_CRITIC = 1e-3        # learning rate of the critic
+WEIGHT_DECAY = 0        # L2 weight decay
+LEARN_EVERY = 10        # learning timestep interval
+LEARN_NUM = 5           # number of learning passes
+GAMMA = 0.99            # discount factor
+TAU = 8e-3              # for soft update of target parameters
+OU_SIGMA = 0.2          # Ornstein-Uhlenbeck noise parameter, volatility
+OU_THETA = 0.15         # Ornstein-Uhlenbeck noise parameter, speed of mean reversion
+EPS_START = 5.0         # initial value for epsilon in noise decay process in Agent.act()
+EPS_EP_END = 300        # episode to end the noise decay process
+EPS_FINAL = 0           # final value for epsilon after decay
+
+### 4.Results
+
+Plots and Results are shown in the Jupyter notebook (Tennis_v4 _AP.ipynb) and Report.
+
+###For additional information:
+Please see the Jupyter Notebook: 'Tennis_v4 _AP.ipynb'
+
+# Try to train your own agents!!!
+The original Udacity repository for this project can be found [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) 
+
+
 
 ### Getting Started
 
