@@ -163,6 +163,62 @@ Download the environment from one of the links below.  You need only select the 
 
 - Place the file in the DRLND GitHub repository, in the `p3_collab-compet/` folder, and unzip (or decompress) the file. 
 
+### How to train the Agent
+The environment you have just set up has the files and tools that allow the training of the agent.  
+
+Start the Jupyter Notebook server by running the commands below. A new browser tab will open with a list of the files in the current folder.
+
+```
+$ conda activate drlnd-p3-collab-compet
+$ jupyter notebook
+```
+
+If you are keen to know more about notebooks and other tools of Project Jupyter, you find more information on [this website](https://jupyter.org/index.html).
+
+Navigate to the root of the project in your system and click on the `Tennis.ipynb` notebook.  
+![jupyter_notebook_workspace](./img/jupyter_notebook_workspace.png)  
+
+You must set the value of the variable `file_name` in the second cell code to match the location of the Unity environment that you have downloaded.  
+![set_file_name](./img/set_file_name.png)
+
+
+You can train the agent by clicking on the menu bar `Kernel` and then `Restart & Run All`.  
+![restart_run_all](./img/restart_run_all.png)  
+
+
+### Adjusting the Hyperparameters
+To experiment with how the Agents learn through distinct parameters, you can tune these variables by changing their values in the singleton instance of Config class:  
+
+* device: where your code will run: for CPU use 'cpu'; for GPU use 'cuda:0'
+* seed: number used to initialize the pseudorandom number generator
+* target_score: how many points the agents must obtain to consider the environment solved
+* target_episodes: how many episodes to consider when calculating the moving average
+* max_episodes: maximum number of training episodes
+* actor_layers: number and size of the actor network's layers
+* critic_layers: number and size of the critic network's layers 
+* actor_lr: learning rate for the actor's local network
+* critic_lr: learning rate for the critic's local network
+* lr\_sched\_step: how many steps before decaying learning rate
+* lr\_sched\_gamma: multiplicative factor of learning rate decay
+* batch_normalization: whether use batch normalization for the critic or not
+* buffer_size: size of the replay buffer
+* batch_size: minibatch size for training phase
+* gamma: discount factor for expected rewards
+* tau: multiplicative factor for the soft-update of the target networks's weights
+* noise: whether use Ornstein-Uhlenbeck noise process or not
+* noise_theta: the long-term mean of the noise process
+* noise_sigma: the volatility or average magnitude
+
+## Uninstall
+If you wish to revert all the modifies in your system, and remove all the code, dependencies and programs installed in the steps above, you will want to follow the next steps.
+
+### Uninstall Miniconda or Anaconda
+To do so, please refer to [this link](https://docs.anaconda.com/anaconda/install/uninstall/).
+
+
+### Remove the code
+Simply delete the entire folder containing the code you downloaded in the step "Getting the code"
+
 ### Instructions
 
 Follow the instructions in `Tennis.ipynb` to get started with training your own agent!  
