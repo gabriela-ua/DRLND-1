@@ -77,18 +77,91 @@ The original Udacity repository for this project can be found [here](https://git
 
 
 ### Getting Started
+#### Clone this repository using Git version control system
+If you are not sure about having Git installed in your system, run the following command to verify that:
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+```
+$ git --version
+```
+If you need to install it, follow [this link](https://git-scm.com/downloads) to do so.
+
+Having Git installed in your system, you can clone this repository by running the following command:
+
+```
+$ git clone https://github.com/silviomori/udacity-deep-reinforcement-learning-p3-collab-compet.git
+```  
+
+### Installing Miniconda
+Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib, and a few others.  
+
+If you would like to know more about Anaconda, visit [this link](https://www.anaconda.com/).
+
+In the following links, you find all the information to install **Miniconda** (*recommended*)
+
+### Configuring the local environment
+- Option 1: Using the environment descriptor file
+
+The environment descriptor file included in this repository describes all the packages required to set up the environment.
+Run the following commands to configure it.
+
+#### for Linux:
+$ conda create -f environment-linux.yml  
+$ conda activate drlnd-p3-collab-compet  
+
+#### for Windows:
+$ conda create -f environment-windows.yml  
+$ conda activate drlnd-p3-collab-compet  
+
+- Option 2: Installing the packages
+If you have problems to create the environment following the steps above, alternatively you can create the environment and install the required packages by following the steps below.
+
+#### 1. Create the environment
+
+$ conda create --name drlnd-p3-collab-compet python=3.6 -y
+$ conda activate drlnd-p3-collab-compet
+
+#### 2. Install PyTorch
+Follow this link to select the right command for your system.
+Here, there are some examples which you can use, if it fit in your system:
+
+#### a. Linux or Windows
+
+#### Run this command if you have an NVIDIA graphic card and want to use it  
+$ conda install pytorch cudatoolkit=10.1 -c pytorch -y
+
+#### Run this command, otherwise
+$ conda install pytorch cpuonly -c pytorch -y
+
+#### b. Mac
+MacOS Binaries do not support CUDA, install from source if CUDA is needed
+
+$ conda install pytorch -c pytorch -y
+
+#### 3. Install Unity Agents
+
+$ pip install unityagents
+
+### Download the Unity environment with the Agents
+
+Download the environment from one of the links below and decompress the file into your project folder.
+You need only select the environment that matches your operating system:
+
+Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
+    
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
+    
     - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
+    
     - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
     
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+    
+   (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
 
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux_NoVis.zip) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
+   (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux_NoVis.zip) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
-2. Place the file in the DRLND GitHub repository, in the `p3_collab-compet/` folder, and unzip (or decompress) the file. 
+- Place the file in the DRLND GitHub repository, in the `p3_collab-compet/` folder, and unzip (or decompress) the file. 
 
 ### Instructions
 
